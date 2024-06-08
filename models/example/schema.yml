@@ -2,7 +2,7 @@
 version: 2
 
 models:
-    - name: my_first_dbt_model
+    - name: consultas-ventas-clientes
       description: "A starter dbt model"
       columns:
           - name: id
@@ -11,11 +11,19 @@ models:
                 - unique
                 - not_null
 
-    - name: my_second_dbt_model
+    - name: consulta-producto-proveedores
       description: "A starter dbt model"
       columns:
           - name: id
             description: "The primary key for this table"
             tests:
                 - unique
+                - not_null
+      
+    - name: consulta-producto-proveedores
+      description: "A starter dbt model"
+      columns:
+          - name: nombre_region
+            description: "The name of region"
+            tests:
                 - not_null
